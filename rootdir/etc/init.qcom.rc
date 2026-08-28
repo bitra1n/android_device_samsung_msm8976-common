@@ -1340,6 +1340,9 @@ on post-fs-data
     # Fingerprint
     mkdir /dev/validity 0770 system system
     mkdir /data/validity 0770 system system
+    # Data directory for T813 fprint HAL
+    mkdir /data/biometrics 0700 system system
+    restorecon_recursive /data/biometrics
 
     chmod 0660 /dev/vfsspi
     chown system system /dev/vfsspi
