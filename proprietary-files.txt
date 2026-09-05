@@ -315,7 +315,8 @@ vendor/lib64/egl/libGLESv2_adreno.so|8bb4e426c26d5c6f44818c0d22f792aa17192dd3
 vendor/lib64/egl/libq3dtools_adreno.so|669f9ee3cee9d1be3fdfc3cc4c1fd64680d5f71b
 vendor/lib64/egl/libq3dtools_esx.so|0245c275a6d5f319ef4e1eb49defee5846a750b2
 vendor/lib64/egl/libQTapGLES.so|c9f262698b078a2fbfbb50af99dcb0ac04b0942a
-vendor/lib64/hw/vulkan.msm8952.so|68d1968e57e98bf77ef2a5030d7880757514d358
+# Linker doesn't search lib/hw; move blob where it can be found
+vendor/lib64/hw/vulkan.msm8952.so:vendor/lib64/vulkan.msm8952.so|68d1968e57e98bf77ef2a5030d7880757514d358
 vendor/lib64/libadreno_utils.so|fc5fee6926b57a419e1198d1c73ab45c1d7dc2a5
 vendor/lib64/libbccQTI.so|073d468d5feedbd227652efe069a2bd32131db4f
 vendor/lib64/libC2D2.so|ca23d7c0d3ba87dca4b454275265686fa44a0010
@@ -341,7 +342,8 @@ vendor/lib/egl/libGLESv2_adreno.so|ad4e90b6d7db67b0b0185fb85564f5ee0b62e58e
 vendor/lib/egl/libq3dtools_adreno.so|68b3e0c84dd7cf19790cb06d80db2bf244726a49
 vendor/lib/egl/libq3dtools_esx.so|5de5a73984b86548a0b65d373bdb195e46cc2615
 vendor/lib/egl/libQTapGLES.so|e9a6feb3bfe90211a0c7b5f63b1cb024213dc9c7
-vendor/lib/hw/vulkan.msm8952.so|e8af3bc7340e6eab2aaa9a21dd3a749ee8a452be
+# Linker doesn't search lib/hw; move blob where it can be found
+vendor/lib/hw/vulkan.msm8952.so:vendor/lib/vulkan.msm8952.so|e8af3bc7340e6eab2aaa9a21dd3a749ee8a452be
 vendor/lib/libadreno_utils.so|19facad321090aece17686a8bbf5a0d5275c98df
 vendor/lib/libbccQTI.so|868a41ddf8135c98426eee4cc6b79999903e1630
 vendor/lib/libC2D2.so|b09b390faf04418f3a2e67ddb445a570f0332dd3
